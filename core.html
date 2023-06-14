@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Core</title>
+    <style>
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #back {
+            min-width: 100%;
+            min-height: 100%;
+            position: fixed;
+            display: absolute;
+        }
+
+        a {
+            text-decoration: none;
+            color: wheat;
+        }
+
+        #ab,
+        h3 {
+            background-color: black;
+            color: wheat;
+            text-align: center;
+            border: 10px solid black;
+            font-size: 50px;
+            font-family: "oswald";
+            border-radius: 20px;
+        }
+
+        .nav-item {
+            background-color: black;
+            color: green;
+            text-align: center;
+            border: 5px solid green;
+            font-size: 20px;
+        }
+
+        #head,
+        #foot {
+            text-align: center;
+        }
+
+        .mx-6 {
+            margin-left: 12rem !important;
+            margin-right: 12rem !important;
+        }
+
+        .mx-6 {
+            margin-top: 14rem !important;
+            margin-bottom: 14rem !important;
+        }
+
+        .bg-dark {
+            background-color: black !important;
+        }
+
+        body {
+            background-image: linear-gradient(green, black);
+            color: wheat;
+        }
+
+        .carousel .carousel-item {
+            height: 1000px;
+            border: 10px solid black;
+        }
+
+        .carousel-item img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            min-height: 500px;
+            margin-bottom: 20px;
+        }
+
+        .carousel-caption {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: black;
+            font-family: "Tangerine";
+            font-size: 60px;
+        }
+
+        label {
+            font-family: "Oswald";
+            font-size: 30px;
+        }
+        h2{
+            font-family: "Oswald";
+            font-size: 40px;
+        }
+        p{
+            font-size:25px;
+            color:white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body onload="change();">
+    <div class="container-fluid min-vw-100">
+        <div class="row mh-50 h-25">
+            <div class="col-sm-12 d-grid p-0 h-25" id="vid">
+                <!-- <video autoplay muted loop id="back">
+                </video> -->
+            </div>
+
+            <div class="col-sm-12 d-grid p-0 h-25">
+                <ul class="nav nav-tabs nav-justified" id="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active px-5" data-bs-toggle="pill" href="#recco"
+                            style="text-decoration: none;color:green;font-weight: bold; font-family: 'Tangerine';font-size: 50px;">Recommendations
+                            🔎</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="text-decoration: none;color:green;font-weight: bold;font-family: 'Tangerine';font-size: 50px;"
+                            class="nav-link px-5" data-bs-toggle="pill" href="#check">Checklist<br />📃</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="text-decoration: none;color:green;font-weight: bold;font-family: 'Tangerine';font-size: 50px;"
+                            class="nav-link" data-bs-toggle="pill" href="#about">About<br />❓</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            style="text-decoration: none;color:green;font-weight: bold;font-family: 'Tangerine';font-size: 50px;"
+                            data-bs-toggle="pill" href="#feed">Feedback<br />💭</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            style="text-decoration: none;color:green;font-weight: bold;font-family: 'Tangerine';font-size: 50px;"
+                            href="javascript:document.location.href = 'index.html';">Log Out<br />👋</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane container active" id="recco">
+                        <h1 class="mt-2"><br />~ Action ~</h1>
+                        <div id="action" class="carousel slide mb-5" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators" id="ai">
+                                <button type="button" data-bs-target="#action" data-bs-slide-to="0"
+                                    class="active"></button>
+                            </div>
+
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner" id="action_carousel">
+
+                            </div>
+
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#action"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#action"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+
+                        <h1 class="mt-2"><br />~ Romance ~</h1>
+                        <div id="romance" class="carousel slide mb-5" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators" id="ri">
+                                <button type="button" data-bs-target="#romance" data-bs-slide-to="0"
+                                    class="active"></button>
+                            </div>
+
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner" id="romance_carousel">
+
+                            </div>
+
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#romance"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#romance"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+
+                        <h1 class="mt-2"><br />~ Motivation ~</h1>
+                        <div id="motivation" class="carousel slide mb-5" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators" id="mi">
+                                <button type="button" data-bs-target="#motivation" data-bs-slide-to="0"
+                                    class="active"></button>
+                            </div>
+
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner" id="motivation_carousel">
+
+                            </div>
+
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#motivation"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#motivation"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+
+                        <h1 class="mt-2"><br />~ Superheroes ~</h1>
+                        <div id="superheroes" class="carousel slide mb-5" data-bs-ride="carousel">
+
+                            <!-- Indicators/dots -->
+                            <div class="carousel-indicators" id="si">
+                                <button type="button" data-bs-target="#superheroes" data-bs-slide-to="0"
+                                    class="active"></button>
+                            </div>
+
+                            <!-- The slideshow/carousel -->
+                            <div class="carousel-inner" id="superheroes_carousel">
+
+                            </div>
+
+                            <!-- Left and right controls/icons -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#superheroes"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#superheroes"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane container fade" id="check">
+                        <h1 class="mt-5">Action</h1><br />
+                        <div id="a">
+
+                        </div>
+
+                        <h1>Romance</h1><br />
+                        <div id="r">
+
+                        </div>
+
+                        <h1>Motivation</h1><br />
+                        <div id="m">
+
+                        </div>
+
+                        <h1>Superheroes</h1><br />
+                        <div id="s">
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane container fade" id="about">
+                        <br />
+                        <br />
+                        <div id="ab" class="mt-2">
+                            <br />
+                            <br />
+                            <h3>Watching movies is fun, but figuring out what movie to watch next is a nerve-racking
+                                experience. Endlessly scrolling through Netflix, watching trailers on YouTube, looking
+                                up IMDb ratings, wasting half an hour and still cannot decide what to watch – does this
+                                seem familiar to you?</h3>
+
+                            <br />
+                            <br />
+                            <h3>Then you have landed on the right page! this website is the answer to the question “What
+                                movie should I watch?”! Your film choices are about to be simplified greatly.</h3>
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <h2>Give it a try! If you like it, please share it! If not, we highly appreciate any kind of
+                                feedback.</h2>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane container fade" id="feed">
+                        <h1 class="mt-5">We value your feedback!</h1>
+                        <form action="/action_page.php" class =  "feed">
+                            <div class="mb-3 mt-3">
+                                <label for="comment">Feedback</label>
+                                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                            </div>
+                            <label for="customRange" class="form-label">Rating</label>
+                            <input type="range" class="form-range" id="customRange" name="points" min="1" max="5">
+                            <pre>🌟                                     🌟🌟                                   🌟🌟🌟                                🌟🌟🌟🌟                       🌟🌟🌟🌟🌟</pre>
+                            <button type="button" class="btn btn-primary" onclick="alertt();">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 d-grid p-5 h-25">
+                    <h1 id = "feedbk"></h1>
+                    <button type="button" onclick="document.location.href = '#nav';" class="btn btn-dark btn-lg">Back To
+                        The Top!</button>
+                    <br />
+
+                    <div style="display:inline-block;text-align:center;">
+                        <a href="https://www.instagram.com/"><img src="images/ig.png" height="35px"
+                                style="display:inline-block;"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://www.linkedin.com/in/chaitanya-mahaprabhu"><img src="images/ld.png"
+                                height="35px" style="display:inline-block;"></a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://www.youtube.com/"><img src="images/yt.png" height="43px"
+                                style="display:inline-block;"></a>
+                    </div>
+                    <div>
+                        <address style="font-size: 20px;">
+                            Author: <a href="mailto:chaitanya.msm.01@gmail.com">Chaitanya Mahaprabhu</a>.<br /><br />
+                            Visit us at:<br>
+                            14/1, Dakshineshwar, Nanjambagrahara, 1st Cross, 5th Main, <br />Chamrajpet, Near TR Mill
+                        </address>
+                        <p>Copyright
+                            <script>document.write(new Date().getFullYear())</script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            class movies {
+                constructor(name, description, rating, src) {
+                    this.name = name;
+                    this.description = description;
+                    this.rating = rating;
+                    this.src = src;
+                }
+            }
+
+            function list() {
+                let action = [];
+                let romance = [];
+                let motivation = [];
+                let superheroes = [];
+
+                action.push(new movies(`John Wick`, `A mercenary goes on a killing spree, when his dog is killed.`, 3, `images/a1.jpg`));
+                action.push(new movies(`Vikram`, `An underground agent fakes his own death to stop a drug cartel.`, 4, `images/a2.jpg`));
+                action.push(new movies(`Master`, `An alcoholic teacher reforms himself to change the life of juvenile prisoners.`, 4, `images/a3.jpg`));
+                action.push(new movies(`Red Notice`, `An interpol agent tries to catch an international thief.`, 3, `images/a4.jpg`));
+                action.push(new movies(`Rampage`, `A primatologist tries to stop infected animals in chicago.`, 3, `images/a5.jpg`));
+
+                romance.push(new movies(`Midnight in Paris`, `An aspiring writer finds himself in uncanny situations and finds true love.`, 5, `images/r1.jpg`));
+                romance.push(new movies(`Before Sunrise`, `Two strangers spend the night exploring the city with an intention of parting ways in the morning.`, 3, `images/r2.jpg`));
+                romance.push(new movies(`About Time`, `A young man finds he can reverse time and discovers the essence of living.`, 4, `images/r3.jpg`));
+                romance.push(new movies(`Titanic`, `The tragic story of the sinking of the ship, titanic from the view of two people in love.`, 4, `images/r4.jpg`));
+                romance.push(new movies(`Barfi`, `An innocent deaf man finds love out of amusing circumstances.`, 5, `images/r5.jpg`));
+
+                motivation.push(new movies(`The Pursuit Of Happyness`, `A relentless father fights the difficulties of life to change the life of his kid and himself.`, 5, `images/m1.jpg`));
+                motivation.push(new movies(`Rocky`, `A boxer's journey to becoming a champion.`, 4, `images/m2.jpg`));
+                motivation.push(new movies(`The Blind Side`, `A homeless kid finds home in a kind family guiding him to a good life.`, 3, `images/m3.jpg`));
+                motivation.push(new movies(`The Bucket List`, `Two terminally ill people fulfill their wishes.`, 5, `images/m4.jpg`));
+                motivation.push(new movies(`Yes Man`, `A pessimistic guy finds the beauty in saying yes to all opportunities.`, 4, `images/m5.jpg`));
+
+                superheroes.push(new movies(`Iron Man`, `A supremely intelligent scientist turns into a superhero out of need.`, 5, `images/s1.jpg`));
+                superheroes.push(new movies(`Wolverine`, `A mutant with adamantium claws fights the villains exploiting the powers of fellow mutants.`, 5, `images/s2.jpg`));
+                superheroes.push(new movies(`Black Panther`, `A wakandan king's journey to becoming black panther.`, 5, `images/s3.jpg`));
+                superheroes.push(new movies(`The Batman`, `A wealthy vigilante fights to change his city.`, 4, `images/s4.jpg`));
+                superheroes.push(new movies(`Wonder Woman`, `A greek princess turns a superhero when the circumstances call for it.`, 3, `images/s5.jpg`));
+
+                for (let i in action) {
+                    let data = `<h2>${action[i].name}</h2><form>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="watched" name="choice" value="watched" checked>
+                                <label class="form-check-label" for="watched">Watched</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="wantto" name="choice" value="wantto">
+                                <label class="form-check-label" for="radio2">Want To</label>
+                            </div></form><br/>`;
+
+                    if (i == 0) {
+                        var car = `<div class="carousel-item active">
+                                    <img src="${action[i].src}" alt="${action[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${action[i].name}</h3>
+                                        <p>${action[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+                    else {
+                        var car = `<div class="carousel-item">
+                                    <img src="${action[i].src}" alt="${action[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${action[i].name}</h3>
+                                        <p>${action[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+                    if (i != 0) {
+                        var ind = `<button type="button" data-bs-target="#action" data-bs-slide-to="${i}"></button>`;
+                        document.getElementById("ai").innerHTML += ind;
+
+                    }
+
+
+                    document.getElementById("a").innerHTML += data;
+                    document.getElementById("action_carousel").innerHTML += car;
+                }
+
+                for (let i in romance) {
+                    let data = `<h2>${romance[i].name}</h2><form>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="watched" name="choice" value="watched" checked>
+                                <label class="form-check-label" for="watched">Watched</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="wantto" name="choice" value="wantto">
+                                <label class="form-check-label" for="radio2">Want To</label>
+                            </div></form><br/>`;
+
+                    if (i == 0) {
+                        var car = `<div class="carousel-item active">
+                                    <img src="${romance[i].src}" alt="${romance[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${romance[i].name}</h3>
+                                        <p>${romance[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+                    else {
+                        var car = `<div class="carousel-item">
+                                    <img src="${romance[i].src}" alt="${romance[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${romance[i].name}</h3>
+                                        <p>${romance[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+
+                    if (i != 0) {
+                        var ind = `<button type="button" data-bs-target="#romance" data-bs-slide-to="${i}"></button>`;
+                        document.getElementById("ri").innerHTML += ind;
+
+                    }
+
+                    document.getElementById("r").innerHTML += data;
+                    document.getElementById("romance_carousel").innerHTML += car;
+                }
+
+                for (let i in motivation) {
+                    let data = `<h2>${motivation[i].name}</h2><form>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="watched" name="choice" value="watched" checked>
+                                <label class="form-check-label" for="watched">Watched</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="wantto" name="choice" value="wantto">
+                                <label class="form-check-label" for="radio2">Want To</label>
+                            </div></form><br/>`;
+
+                    if (i == 0) {
+                        var car = `<div class="carousel-item active">
+                                    <img src="${motivation[i].src}" alt="${motivation[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${motivation[i].name}</h3>
+                                        <p>${motivation[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+                    else {
+                        var car = `<div class="carousel-item">
+                                    <img src="${motivation[i].src}" alt="${motivation[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${motivation[i].name}</h3>
+                                        <p>${motivation[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+
+                    if (i != 0) {
+                        var ind = `<button type="button" data-bs-target="#motivation" data-bs-slide-to="${i}"></button>`;
+                        document.getElementById("mi").innerHTML += ind;
+
+                    }
+
+                    document.getElementById("m").innerHTML += data;
+                    document.getElementById("motivation_carousel").innerHTML += car;
+                }
+
+                for (let i in superheroes) {
+                    let data = `<h2>${superheroes[i].name}</h2><form>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="watched" name="choice" value="watched" checked>
+                                <label class="form-check-label" for="watched">Watched</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="wantto" name="choice" value="wantto">
+                                <label class="form-check-label" for="radio2">Want To</label>
+                            </div></form><br/>`;
+                    if (i == 0) {
+                        var car = `<div class="carousel-item active">
+                                    <img src="${superheroes[i].src}" alt="${superheroes[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${superheroes[i].name}</h3>
+                                        <p>${superheroes[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+                    else {
+                        var car = `<div class="carousel-item">
+                                    <img src="${superheroes[i].src}" alt="${superheroes[i].name}" class="d-block w-100">
+                                    <div class="carousel-caption">
+                                        <h3>${superheroes[i].name}</h3>
+                                        <p>${superheroes[i].description}</p>
+                                    </div>
+                                </div>`;
+                    }
+
+                    if (i != 0) {
+                        var ind = `<button type="button" data-bs-target="#superheroes" data-bs-slide-to="${i}"></button>`;
+                        document.getElementById("si").innerHTML += ind;
+
+                    }
+
+                    document.getElementById("s").innerHTML += data;
+                    document.getElementById("superheroes_carousel").innerHTML += car;
+                }
+            }
+
+            function change() {
+                list();
+
+                let files = 5;
+                var src = `videos/${Math.floor(Math.random() * files) + 1}.mp4`;
+
+                document.getElementById('back').setAttribute("src", src)
+            }
+
+            function alertt() {
+                document.getElementById("feedbk").innerHTML += `<h1 style = "color:wheat;font-weight:normal;">
+                <strong>Success!, Your feedback has been noted.</strong> 
+                </h1>`;
+                setTimeout(function () { window.location.href = 'core.html'; }, 3000);
+            }
+        </script>
+</body>
+
+</html>

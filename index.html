@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel = "icon" type = "image/png" href = "images/favicon.png">
+    <title>Login</title>
+    <style>
+        #back{
+            min-width: 100%;
+            min-height: 100%;
+            position:fixed;
+        }
+        #head, #foot{
+            text-align: center;
+        }
+        .mx-6{
+            margin-left: 12rem !important;
+            margin-right: 12rem !important;
+        }
+        .mx-6{
+            margin-top: 14rem !important;
+            margin-bottom: 14rem !important;
+        }
+        .bg-dark{
+            background-color: black !important;
+        }
+        h4{
+            font-family: "Oswald";
+            font-size: 40px;
+        }
+        .btn, a{
+            font-family: "Oswald";
+            font-size: 25px;
+        }
+        input{
+            font-family: "Oswald";
+        }
+        .valid-feedback,.invalid-feedback{
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body onload = "change();">
+    <div class = "container-fluid d-flex min-vh-100 flex-column">
+         <div class = "row flex-grow-1">
+            <div class = "col-sm-6 mh-100 bg-dark flex-column d-grid">
+                <div class = "card my-auto border border-5 border-success">
+                    <div class = "card-header bg-dark text-white rounded-0 border border-3 border-success" id = "head">
+                        <h4 class = "card-title" id = "title">USER LOGIN</h4>
+                    </div>
+                    <div class = "card-body bg-dark rounded-0 border border-3 border-success">
+                        <form class = "was-validated">
+                            <div class = "mb-3 mt-3">
+                                <div class = "input-group">
+                                <span class = "input-group-text">🧑</span>
+                                <input type = "text" class = "form-control" id = "user" name = "user" placeholder="Username" required pattern = "[a-zA-Z0-9]{1,}">
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Alphanumerals Allowed.</div>
+                                </div>
+                            </div>
+                            <div class = "mb-3 mt-3">
+                                <div class = "input-group">
+                                <span class = "input-group-text">🔑</span>
+                                <input type = "text" class = "form-control" id = "pass" name = "pass" placeholder="Password" required pattern = ".{5}">
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">5 Characters Allowed.</div>
+                                </div>
+                            </div>
+                            <div class = "d-grid">
+                            <button type = "button" class = "btn btn-lg btn-outline-success mt-4" onclick = "document.location.href = `core.html`">LOGIN</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class = "card-footer bg-dark rounded-0 border border-3 border-success" id = "foot">
+                        <div class = "list-group list-group-horizontal">
+                            <a href = "register.html" class = "list-group-item mx-1 rounded list-group-item-success list-group-item-action">Register</a>
+                            <a href = "#" class = "list-group-item mx-1 rounded list-group-item-success list-group-item-action" data-bs-toggle = "modal" data-bs-target = "#terms">Terms and Conditions</a>
+
+                            <div class = "modal fade modal-lg" id = "terms">
+                                <div class = "modal-dialog modal-dialog-scrollable">
+                                    <div class = "modal-content">
+                                        
+                                        <div class = "modal-header">
+                                            <h4 class = "modal-title">Terms and Conditions</h4>
+                                        </div>
+
+                                        <div class = "modal-body" style = "text-align: left;">
+                                            <h6>Lorem - I</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ipsam praesentium fuga pariatur expedita quibusdam debitis! Nihil veritatis esse corrupti natus sunt. Soluta atque omnis officia, incidunt sapiente facere beatae.</p>
+                                            <br/>
+                                            <h6>Lorem - II</h6>
+                                            <p style = "text-transform:uppercase;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ipsam praesentium fuga pariatur expedita quibusdam debitis! Nihil veritatis esse corrupti natus sunt. Soluta atque omnis officia, incidunt sapiente facere beatae.</p>
+                                            <br/>
+                                            <h6>Lorem - III</h6>
+                                            <p style = "text-transform:uppercase;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ipsam praesentium fuga pariatur expedita quibusdam debitis! Nihil veritatis esse corrupti natus sunt. Soluta atque omnis officia, incidunt sapiente facere beatae.</p>
+                                            <br/>
+                                            <h6>Lorem - IV</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ipsam praesentium fuga pariatur expedita quibusdam debitis! Nihil veritatis esse corrupti natus sunt. Soluta atque omnis officia, incidunt sapiente facere beatae.</p>
+                                            <br/>
+                                        </div>
+
+                                        <div class = "modal-footer">
+                                            <button type = "button" class = "btn btn-success" data-bs-dismiss = "modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "col-sm-6 bg-dark mh-100 p-0">
+                <video autoplay muted loop id = "back">
+                </video>
+            </div> 
+         </div>
+    </div>
+
+    <script>
+        function change(){
+            let files = 6;
+            var src = `videos/${Math.floor(Math.random() * files)+1}.mp4`;
+
+            document.getElementById('back').setAttribute("src",src)
+        }
+    </script>
+</body>
+</html>
